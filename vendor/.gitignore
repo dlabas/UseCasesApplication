@@ -1,0 +1,11 @@
+!.gitignore
+.composer
+autoload.php
+Backup*
+bin
+composer
+Dlc*
+doctrine*
+symfony
+zendframework
+ZF*

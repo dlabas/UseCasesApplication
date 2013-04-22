@@ -1,0 +1,74 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('ZF2 '. $this->translate('Use Cases Application'))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
+
+        <!-- Le styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap-responsive.min.css')
+                        ->prependStylesheet($this->basePath() . '/css/style.css')
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css') ?>
+
+        <!-- Scripts -->
+        <?php echo $this->headScript()->prependFile($this->basePath() . '/js/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+                                      ->prependFile($this->basePath() . '/js/bootstrap.min.js')
+                                      ->prependFile($this->basePath() . '/js/jquery.min.js') ?>
+
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Use Cases') ?></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a></li>
+                            <li><a href="<?php echo $this->url('dlcusecase') ?>"><?php echo $this->translate('Use Cases') ?></a></li>
+                            <li><a href="<?php echo $this->url('dlccategory') ?>"><?php echo $this->translate('Categories') ?></a></li>
+                            <li><a href="<?php echo $this->url('dlcusecase/priority') ?>"><?php echo $this->translate('Priorities') ?></a></li>
+                            <li><a href="<?php echo $this->url('dlcusecase/type') ?>"><?php echo $this->translate('Types') ?></a></li>
+                            <li class="dropdown">
+                                <a href="<?php echo $this->url('dlcusecase') ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo $this->translate('More') ?> <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-header"><?php echo $this->translate('Use Cases') ?></li>
+                                    <li><a href="<?php echo $this->url('dlcusecase') ?>"><?php echo $this->translate('Show use cases') ?></a></li>
+                                    <li><a href="<?php echo $this->url('dlcusecase/diagramm') ?>"><?php echo $this->translate('Show diagramm') ?></a></li>
+                                    <li><a href="<?php echo $this->url('dlcusecase/add') ?>"><?php echo $this->translate('Add new use case') ?></a></li>
+                                    <li class="divider"></li>
+                                    <li class="nav-header"><?php echo $this->translate('Categories') ?></li>
+                                    <li><a href="<?php echo $this->url('dlccategory') ?>"><?php echo $this->translate('Show categories') ?></a></li>
+                                    <li><a href="<?php echo $this->url('dlccategory/add') ?>"><?php echo $this->translate('Add new category') ?></a></li>
+                                    <li class="divider"></li>
+                                    <li class="nav-header"><?php echo $this->translate('Priorities') ?></li>
+                                    <li><a href="<?php echo $this->url('dlcusecase/priority') ?>"><?php echo $this->translate('Show priorities') ?></a></li>
+                                    <li><a href="<?php echo $this->url('dlcusecase/priority/add') ?>"><?php echo $this->translate('Add new priority') ?></a></li>
+                                    <li class="divider"></li>
+                                    <li class="nav-header"><?php echo $this->translate('Types') ?></li>
+                                    <li><a href="<?php echo $this->url('dlcusecase/type') ?>"><?php echo $this->translate('Show types') ?></a></li>
+                                    <li><a href="<?php echo $this->url('dlcusecase/type/add') ?>"><?php echo $this->translate('Add new type') ?></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <?php echo $this->content; ?>
+            <hr>
+            <footer>
+                <!-- <p>&copy; 2012 - <?php echo date('Y') ?></p>  -->&nbsp;
+            </footer>
+        </div> <!-- /container -->
+        <?php echo $this->inlineScript() ?>
+    </body>
+</html>
