@@ -68,3 +68,9 @@ Installation
 
     );
 
+4. Create your database
+
+    ```bash
+    mysql -u root -e"CREATE DATABASE use_cases_dev;"
+
+5. Make sure that the directory `pathToProject/data` is writeable by your web server
