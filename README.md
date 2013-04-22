@@ -26,7 +26,7 @@ Installation
 1. Clone this project into your `./pathToProject/` directory.
 2. Change directory to your project directory:
 
-    ```json
+    ```bash
     cd pathToProject/
     ```
 
@@ -67,10 +67,17 @@ Installation
         //...
 
     );
+    ```
 
-4. Create your database
+3. Create your database
 
     ```bash
     mysql -u root -e"CREATE DATABASE use_cases_dev;"
 
+4. Load default database dump
+
+    ```bash
+    mysql -u root use_cases_dev < data/dumps/initial_dump.sql
+
 5. Make sure that the directory `pathToProject/data` is writeable by your web server
+6. Make sure that the document root of your virtual host points to the `public` directory

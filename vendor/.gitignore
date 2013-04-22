@@ -5,6 +5,7 @@ Backup*
 bin
 composer
 Dlc*
+dl-commons*
 doctrine*
 symfony
 zendframework

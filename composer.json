@@ -37,7 +37,7 @@
     },
     "autoload": {
         "psr-0": {
-            "DoctrineExtensions\\NestedSet": "vendor/doctrine2-nestedset/lib"
+            "DoctrineExtensions\\NestedSet": "vendor/doctrine2-extensions/doctrine2-nestedset/lib"
         }
     }
 }
