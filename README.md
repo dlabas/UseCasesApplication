@@ -33,8 +33,8 @@ Installation
 3. Now tell composer to download all requirements by running the command:
 
     ```bash
-    $ php composer.phar self-update
-    $ php composer.phar install
+    php composer.phar self-update
+    php composer.phar install
     ```
 
 #### Post installation
@@ -42,7 +42,8 @@ Installation
 1. Copy the `config/autoload/local.php.dist` file for your project:
 
     ```bash
-    $ cp config/autoload/local.php.dist config/autoload/local.php
+    cp config/autoload/local.php.dist config/autoload/local.php
+    ```
 
 2. Enabling your DB connection in your `config/autoload/local..php` file.
 
@@ -73,11 +74,13 @@ Installation
 
     ```bash
     mysql -u root -e"CREATE DATABASE use_cases_dev;"
+    ```
 
 4. Load default database dump
 
     ```bash
     mysql -u root use_cases_dev < data/dumps/initial_dump.sql
+    ```
 
 5. Make sure that the directory `pathToProject/data` is writeable by your web server
 6. Make sure that the document root of your virtual host points to the `public` directory
