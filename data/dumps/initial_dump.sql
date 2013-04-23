@@ -44,7 +44,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,1,1,4,'example-root-category','Example Root Category','The Example Root Category is the root category for all sample data categories','/img/no_thumbnail.png','2013-04-22 23:28:35','2013-04-22 23:28:35'),(2,1,2,3,'example-child-category','Example Child Category','The Example Child Category is the a child category of the Example Root Category','/img/no_thumbnail.png','2013-04-22 23:28:35',NULL),(3,3,1,8,'use-case-root-category','Use Cases','The Use Case Root Category is the root category for all use case categories','/img/no_thumbnail.png','2013-04-22 23:28:35','2013-04-22 23:28:36'),(4,3,2,3,'use-case-device-category','Device','The Device Category is the a child category of the Use Case Root Category','/img/no_thumbnail.png','2013-04-22 23:28:36',NULL),(5,3,4,5,'use-case-user-category','User','The User Category is the a child category of the Use Case Root Category','/img/no_thumbnail.png','2013-04-22 23:28:36',NULL),(6,3,6,7,'use-case-customer-category','Customer','The Customer Category is the a child category of the Use Case Root Category','/img/no_thumbnail.png','2013-04-22 23:28:36',NULL);
+INSERT INTO `categories` VALUES (1,1,1,4,'example-root-category','Example Root Category','The Example Root Category is the root category for all sample data categories','/img/no_thumbnail.png','2013-04-23 09:20:22','2013-04-23 09:20:22'),(2,1,2,3,'example-child-category','Example Child Category','The Example Child Category is the a child category of the Example Root Category','/img/no_thumbnail.png','2013-04-23 09:20:22',NULL),(3,3,1,8,'use-case-root-category','Use Cases','The Use Case Root Category is the root category for all use case categories','/img/no_thumbnail.png','2013-04-23 09:20:22','2013-04-23 09:20:23'),(4,3,2,3,'use-case-device-category','Device','The Device Category is the a child category of the Use Case Root Category','/img/no_thumbnail.png','2013-04-23 09:20:23',NULL),(5,3,4,5,'use-case-user-category','User','The User Category is the a child category of the Use Case Root Category','/img/no_thumbnail.png','2013-04-23 09:20:23',NULL),(6,3,6,7,'use-case-customer-category','Customer','The Customer Category is the a child category of the Use Case Root Category','/img/no_thumbnail.png','2013-04-23 09:20:23',NULL);
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -99,7 +99,7 @@ CREATE TABLE `use_case_priorities` (
 
 LOCK TABLES `use_case_priorities` WRITE;
 /*!40000 ALTER TABLE `use_case_priorities` DISABLE KEYS */;
-INSERT INTO `use_case_priorities` VALUES (1,'High','2013-04-22 23:28:35',NULL),(2,'Normal','2013-04-22 23:28:35',NULL),(3,'Low','2013-04-22 23:28:35',NULL);
+INSERT INTO `use_case_priorities` VALUES (1,'High','2013-04-23 09:20:22',NULL),(2,'Normal','2013-04-23 09:20:23',NULL),(3,'Low','2013-04-23 09:20:23',NULL);
 /*!40000 ALTER TABLE `use_case_priorities` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -125,7 +125,7 @@ CREATE TABLE `use_case_types` (
 
 LOCK TABLES `use_case_types` WRITE;
 /*!40000 ALTER TABLE `use_case_types` DISABLE KEYS */;
-INSERT INTO `use_case_types` VALUES (1,'Business Use Case','2013-04-22 23:28:35',NULL),(2,'System Use Case','2013-04-22 23:28:35',NULL);
+INSERT INTO `use_case_types` VALUES (1,'Business Use Case','2013-04-23 09:20:22',NULL),(2,'System Use Case','2013-04-23 09:20:22',NULL);
 /*!40000 ALTER TABLE `use_case_types` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -143,6 +143,7 @@ CREATE TABLE `use_cases` (
   `category_id` int(11) DEFAULT NULL,
   `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `link` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `note` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -173,4 +174,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-04-22 23:29:11
+-- Dump completed on 2013-04-23  9:20:38
