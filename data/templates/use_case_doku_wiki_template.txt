@@ -1,0 +1,28 @@
+====== #NAME# ======
+
+===== Typ =====
+  * #TYPE#
+
+===== Kategorie =====
+  * #CATEGORY#
+
+===== Beschreibung =====
+  * #DESCRIPTION#
+
+===== Priorität =====
+  * #PRIORITY#
+
+===== Details =====
+  * #DETAILS#
+
+===== Bemerkungen  =====
+  * #COMMENT#
+
+===== Eingehende Daten =====
+  #INPUT_DATA#
+
+===== Ausgehende Daten =====
+  #OUTPUT_DATA#
+
+===== Abhängigkeiten zu anderen Use Cases =====
+  #DEPENDENCIES#
