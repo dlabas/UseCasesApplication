@@ -26,3 +26,6 @@
 
 ===== Abhängigkeiten zu anderen Use Cases =====
   #DEPENDENCIES#
+
+===== Link zu UseCasesApp =====
+  * #LINK_TO_USE_CASES_APP#
